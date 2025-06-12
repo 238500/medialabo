@@ -1,0 +1,42 @@
+h1{
+    color: white;
+	text-shadow: red 1px 0 10px;
+    background-color: aqua;
+    width: 500px;
+}
+.theme{
+    color: red;
+    background-color: wheat;
+    width: 200px;
+}
+.project{
+    color: red;
+    background-color: wheat;
+    width: 300px;
+}
+.game{
+    color: red;
+    background-color: wheat;
+    width: 150px;
+}
+.learn{
+    color: red;
+    background-color: wheat;
+    width: 220px;
+}
+div{
+    background-color: antiquewhite;
+    width: 1510px;
+}
+a:link{
+    color: rgb(199, 23, 23);
+}
+a:visited{
+    color: rgb(26, 26, 130);
+}
+a:hover{
+    text-decoration: none;
+}
+div{
+    background-color: aqua;
+}
