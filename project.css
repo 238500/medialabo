@@ -1,11 +1,18 @@
-h1{
-    color: red;
-    background-color: yellow;
-    width: 12%;
+h1 {
+  color: red;
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 10px;
 }
-h2{
-    color: aqua;
+
+h2 {
+  color: yellow;
+  background-color: black;
+  width: 25%;
+  margin-bottom: 20px;
 }
-h3{
-    color: steelblue;
+
+h3 {
+  color: aqua;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
