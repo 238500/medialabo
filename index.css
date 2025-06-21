@@ -1,42 +1,29 @@
-h1{
+h1 {
     color: white;
-	text-shadow: red 1px 0 10px;
+    text-shadow: red 1px 0 10px;
     background-color: aqua;
     width: 500px;
 }
-.theme{
+
+.theme, .project, .game, .learn {
     color: red;
     background-color: wheat;
-    width: 200px;
+    padding: 5px;
+    border-left: 6px solid red;
+    margin-top: 20px;
 }
-.project{
-    color: red;
-    background-color: wheat;
-    width: 300px;
+
+h3 {
+    color: darkred;
+    margin-top: 15px;
 }
-.game{
-    color: red;
-    background-color: wheat;
-    width: 150px;
-}
-.learn{
-    color: red;
-    background-color: wheat;
-    width: 220px;
-}
-div{
-    background-color: antiquewhite;
-    width: 1510px;
-}
-a:link{
+
+a:link {
     color: rgb(199, 23, 23);
 }
-a:visited{
+a:visited {
     color: rgb(26, 26, 130);
 }
-a:hover{
+a:hover {
     text-decoration: none;
-}
-div{
-    background-color: aqua;
 }
