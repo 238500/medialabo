@@ -23,7 +23,7 @@ if(kaisu>=4){
   console.log('答えは'+kotae+'でした.すでにゲームは終わっています');
 }else if(yoso === kotae){
     console.log('正解です.おめでとう！');
-    k=4;
+    kaisu=4;
 }else{
   if(kaisu === 3){
     console.log('まちがい.残念でした答えは'+kotae+'でした.');
