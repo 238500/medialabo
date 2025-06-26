@@ -1,4 +1,10 @@
-
+function Keyword() {
+  let input = document.querySelector('#gourmet');
+  let keyword = input.value;
+  console.log('検索キー:', keyword);
+}
+let b = document.querySelector('button#print');
+b.addEventListener('click', Keyword);
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
   const shops = data.results.shop;
@@ -24,6 +30,10 @@ function printDom(data) {
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
+document.addEventListener('DOMContentLoaded', function () {
+  let button = document.querySelector('#print');
+  button.addEventListener('click', sendRequest);
+});
 
 
 
