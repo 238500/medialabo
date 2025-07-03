@@ -7,27 +7,99 @@ let b = document.querySelector('button#print');
 b.addEventListener('click', Keyword);
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-  const shops = data.results.shop;
+  let shops = data.results.shop;
   count=1;
   for (let shop of shops) {
     console.log(count+"件目の検索結果");
-    console.log("店舗名:"+shop.name);
-    console.log("住所:"+shop.address);
-    console.log("アクセス:"+shop.access);
-    console.log("最寄駅:"+shop.station_name);
-    console.log("予算:"+shop.budget.name);
-    console.log("キャッチコピー:"+shop.catch);
-    console.log("ジャンル:"+shop.genre.name);
-    console.log("サブジャンル:"+shop.sub_genre.name);
-    console.log("営業日時:"+shop.open);
+    console.log("店舗名:"+s.name);
+    console.log("住所:"+s.address);
+    console.log("アクセス:"+s.access);
+    console.log("最寄駅:"+s.station_name);
+    console.log("予算:"+s.budget.name);
+    console.log("キャッチコピー:"+s.catch);
+    console.log("ジャンル:"+s.genre.name);
+    console.log("サブジャンル:"+s.sub_genre.name);
+    console.log("営業日時:"+s.open);
     count++
   }
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let result = document.createElement('div');
+  result.setAttribute('id', 'result');
+  document.body.insertAdjacentElement('beforeend', result);
 
+  let gazo = 0;
+  let count = 1;
+  let shops = data.results.shop;
+
+  for (let s of shops) {
+    let div = document.createElement('div');
+    div.setAttribute('class', 'shop');
+
+    let h3 = document.createElement('h3');
+    h3.textContent = count + "件目の検索結果";
+    div.insertAdjacentElement('beforeend', h3);
+
+    let img = document.createElement('img');
+    img.setAttribute('width', '50');
+    if (gazo === 0) {
+      img.setAttribute('src', 'https://imgfp.hotp.jp/IMGH/22/35/P038512235/P038512235_480.jpg');
+    } else if (gazo === 1) {
+      img.setAttribute('src', 'https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/ml8lpue7/34700864/vt3u_w140h140.jpg');
+    }
+    div.insertAdjacentElement('beforeend', img);
+
+    let name = document.createElement('p');
+    name.textContent = "店舗名: " + s.name;
+    div.insertAdjacentElement('beforeend', name);
+
+    let address = document.createElement('p');
+    address.textContent = "住所: " + s.address;
+    div.insertAdjacentElement('beforeend', address);
+
+    let access = document.createElement('p');
+    access.textContent = "アクセス: " + s.access;
+    div.insertAdjacentElement('beforeend', access);
+
+    let station = document.createElement('p');
+    station.textContent = "最寄駅: " + s.station_name;
+    div.insertAdjacentElement('beforeend', station);
+
+    let budget = document.createElement('p');
+    budget.textContent = "予算: " + s.budget.name;
+    div.insertAdjacentElement('beforeend', budget);
+
+    let catchCopy = document.createElement('p');
+    catchCopy.textContent = "キャッチコピー: " + s.catch;
+    div.insertAdjacentElement('beforeend', catchCopy);
+
+    let genre = document.createElement('p');
+    genre.textContent = "ジャンル: " + s.genre.name;
+    div.insertAdjacentElement('beforeend', genre);
+
+    let subgenre = document.createElement('p');
+    subgenre.textContent = "サブジャンル: " + s.sub_genre.name;
+    div.insertAdjacentElement('beforeend', subgenre);
+
+    let open = document.createElement('p');
+    open.textContent = "営業日時: " + s.open;
+    div.insertAdjacentElement('beforeend', open);
+
+    result.insertAdjacentElement('beforeend', div);
+
+    count++;
+    gazo++;
+  }
+
+  let end = document.createElement('p');
+  end.textContent = "検索結果は以上です。";
+  result.insertAdjacentElement('beforeend', end);
 }
+
+
+
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
