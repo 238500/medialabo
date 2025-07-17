@@ -84,6 +84,7 @@ function printDom(data) {
     result.insertAdjacentElement('beforeend', div);
 
     count++;
+
   }
 
   let end = document.createElement('p');
