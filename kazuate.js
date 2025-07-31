@@ -16,7 +16,7 @@ function hantei() {
   let result = document.querySelector('p#result');
   // 課題3-1: 正解判定する
   console.log(kaisu+'回目の予想'+yoso);
-if (kaisu >= 4) {
+if (kaisu >= 4) { 
     result.textContent = '答えは'+kotae+'でした。すでにゲームは終わっています。';
   } else if (yoso === kotae) {
     result.textContent = '正解です！おめでとう！';
